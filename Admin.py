@@ -1,22 +1,26 @@
+D = {"id" : ["usuario", "senha", "saldo"]}
+
 def Admin():
-    cadastrar = input("Digite um nome: ")
     
     while True:
-        for i in range (1):    
-            print("Qual opção desejas realizar: ")
-            Opção= int(input)("Se desejas se cadastrar usuário ao banco digite 1\n Para deletar conta de usuário digite 2:  ")
+    
+        opcao= int(input("1 - Cadastrar Usuario\n2 - Deletar Usuario\nQual opção desejas realizar: "))
 
-            if Opção== 1:
-                nome = input("Digite seu nome e sobrenome: ")
-                cpf = input("Digite seu numero de cpf: ")
-                chave = input("Digite uma chave de cadastro: ")
-                D.update({chave:(nome, cpf) })
-                print(f'A conta de {nome} foi criada e ja pode ser utilizada' )
-            else:
-                chave = input("Digite a chave de usuário que desejas excluir: ")
-                print(D.get(chave))
-                print( )
-                print('Deseja ralmente excuir esta conta\n se sim digite 1\n ')
+        if opcao == 1:
+            nome = input("Digite o nome do cliente ")
+            senha = input("Digite uma nova senha para o cliente: ")
+
+            D[id] = [nome, senha, 0]
+
+            print(f'A conta de {nome} foi criada e ja pode ser utilizada' )
+        elif opcao == 2:
+            chave = input("Digite a chave de usuário que desejas excluir: ")
+            print(D.get(chave))
+            print( )
+            print('Deseja ralmente excuir esta conta\n se sim digite 1\n ')
+        else:
+            print("Você saiu do Admin")
+            break
 
 
 
