@@ -1,4 +1,7 @@
-D = {"id" : ["usuario", "senha", "saldo"]}
+D = {
+    "id" : ["usuario", "senha", 0, "pix"],
+    "id2" : ["usuario2", "senha2", 0, "pix2"],
+}
 
 def Admin():
     
