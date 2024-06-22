@@ -5,7 +5,10 @@ import getpass
 Clientes = {
     1 : ["Gabriel", "senha", 0, "XXX"],
     2 : ["Valentina", "senha123", 0, "YYY"],
+    3 : ["a", "a", 0],
 }
+
+    #ID : [usuario, senha] 
 Admins = { 0 : ["admin", "admin"]}
 
 def Admin():
@@ -30,8 +33,6 @@ def Admin():
         if input("Deseja tentar de novo(S/N)? ").upper() == "N":
             break
 
-
-
 def opcaoAdmin():
     while True:
         while True:
@@ -52,8 +53,6 @@ def opcaoAdmin():
             
             for i, va in Clientes.items():
                 if i != ncodigo:
-                    print(i)
-                    print(va)
                     break
                 else:
                     ncodigo += 1
@@ -87,5 +86,3 @@ def opcaoAdmin():
         else:
             print("Você saiu do Admin")
             break
-
-opcaoAdmin()
