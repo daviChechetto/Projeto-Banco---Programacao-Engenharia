@@ -14,7 +14,7 @@ def Admin():
     
     while True:
         usuario = input("Digite o seu usuário: ")
-
+        cont = 0
         # Procura se o usuario está cadastrado
         for i in Admins:
            
@@ -25,12 +25,13 @@ def Admin():
                 #Usuário Existe  &&  verificação se a senha está correta
                 if Admins[i][1] == senha:
                     opcaoAdmin()
-                    break
-
-                   
-        print("usuario não encontrado!")
-        if input("Deseja tentar de novo(S/N)? ").upper() == "N":
-            break
+            else:
+                    cont += 1
+        if len(Clientes) == cont:
+            print("usuario não encontrado!")
+            if input("Deseja tentar de novo(S/N)? ").upper() == "N":
+                break
+        break
 
 def opcaoAdmin():
     while True:
