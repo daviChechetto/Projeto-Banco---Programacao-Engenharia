@@ -3,9 +3,8 @@ import getpass
 
     #ID : [usuario, senha, saldo, chave-pix]
 Clientes = {
-    1 : ["Gabriel", "senha", 0, "XXX"],
-    2 : ["Valentina", "senha123", 0, "YYY"],
-    3 : ["a", "a", 0],
+    1 : ["Gabriel", "senha", 100, "QWE"],
+    2 : ["Valentina", "senha123", 100, "ASD"],
 }
 
     #ID : [usuario, senha] 
